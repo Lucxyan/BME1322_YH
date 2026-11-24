@@ -1,4 +1,4 @@
-"""Run all analyses and regenerate the figures, tables, and optional draft."""
+"""Run all analyses and regenerate the figures, tables, and optional reports."""
 import argparse
 import json
 import os
