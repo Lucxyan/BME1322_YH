@@ -1,0 +1,69 @@
+{
+  "cleveland/cls/KNN (k=5)": {
+    "accuracy": 0.821803,
+    "precision": 0.824888,
+    "recall": 0.777249,
+    "f1": 0.799504,
+    "auc": 0.881985
+  },
+  "cleveland/cls/Naive Bayes": {
+    "accuracy": 0.854645,
+    "precision": 0.863163,
+    "recall": 0.820106,
+    "f1": 0.838457,
+    "auc": 0.902211
+  },
+  "cleveland/cls/Logistic Regression": {
+    "accuracy": 0.831585,
+    "precision": 0.830438,
+    "recall": 0.798413,
+    "f1": 0.812617,
+    "auc": 0.911631
+  },
+  "cleveland/cls/SVM (linear)": {
+    "accuracy": 0.834863,
+    "precision": 0.836711,
+    "recall": 0.798413,
+    "f1": 0.815262,
+    "auc": 0.910463
+  },
+  "cleveland/cls/SVM (RBF)": {
+    "accuracy": 0.838087,
+    "precision": 0.852606,
+    "recall": 0.783862,
+    "f1": 0.815278,
+    "auc": 0.897508
+  },
+  "cleveland/cls/Decision Tree (d=3)": {
+    "accuracy": 0.778634,
+    "precision": 0.766305,
+    "recall": 0.74709,
+    "f1": 0.755238,
+    "auc": 0.809088
+  },
+  "cleveland/reg/Linear Regression": {
+    "r2": 0.522537,
+    "mae": 0.634911,
+    "rmse": 0.842442
+  },
+  "cleveland/reg/Ridge (alpha=1)": {
+    "r2": 0.52276,
+    "mae": 0.634785,
+    "rmse": 0.842275
+  },
+  "cleveland/reg/Lasso (alpha=0.01)": {
+    "r2": 0.525461,
+    "mae": 0.632992,
+    "rmse": 0.840237
+  },
+  "cleveland/reg/SVR (RBF, C=1)": {
+    "r2": 0.43059,
+    "mae": 0.65973,
+    "rmse": 0.913401
+  },
+  "cleveland/reg/Regression Tree (d=3)": {
+    "r2": 0.29215,
+    "mae": 0.712077,
+    "rmse": 1.013903
+  }
+}
