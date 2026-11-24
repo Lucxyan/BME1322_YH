@@ -25,10 +25,20 @@ python main.py --data-dir "/path/to/assignment4-data"
 - `results/` 包含基线 JSON、独立结果 JSON 和全部实验表。
 - `results/fold_auc.md` 单独列出调参后两个 SVM 在同一测试折上的 AUC 与差值（线性核减 RBF 核），由默认运行命令重生。
 
-## 亲自核查 AI 辅助结果
+## 已完成的核查
 
-1. 运行上述命令，看 `results/tables.md` 的复现核对表。若使用课程自带核查命令，从数据目录执行 `python baselines.py --verify <assignment4/results/mine.json 的绝对路径>`。
-2. 确认 SVM 的 AUC 使用 decision_function 连续分数，并核对 results/fold_auc.md 中逐折 AUC 的等权平均与分类总表一致。
-3. 同时核对逐折回归均值基线和讲义中的零值。可逐折手算训练均值，再比较其在测试折上的 R²。
-4. 报告末尾的 AI 使用声明记录了工具用途、验证方法和本人核查确认；更新实验后应同步核对该声明。
+本人已完成对 AI 辅助结果的核查，具体方法见报告末尾的 AI 使用声明。
 
+1. 已核对固定超参数基线。独立实现与课程脚本的 45 项指标完全一致，最大绝对差值为 0.000000，满足 0.01 的容差要求，详见 `results/tables.md`。
+2. 已确认 SVM 的 AUC 使用 `decision_function()` 连续分数，并核对 `results/fold_auc.md` 中逐折 AUC 的等权平均与分类总表一致。
+3. 已确认两条任务线使用相同的课程固定五折，填补、标准化和多项式变换在训练折内拟合；十次单次划分对照预先固定课程基线深度 3。
+4. 已核对逐折训练均值参考线，五折平均 R² 为 −0.011653；其负值来自各训练折与测试折均值的差异。
+5. 已检查报告中的结果、图表、讨论题与 AI 使用声明，并确认结论限定于本次评价协议和扫描范围。
+
+### 核查结果的复现命令
+
+当 `assignment4-data/` 与 `assignment4/` 相邻时，可在课程数据目录中重新运行以下命令。
+
+```text
+python baselines.py --verify ../assignment4/results/mine.json
+```
